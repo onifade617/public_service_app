@@ -35,14 +35,35 @@ def display_page():
     )
    
     # Render the map
-    st.pydeck_chart(pdk.Deck(
+    deck = pdk.Deck(
         map_style='mapbox://styles/mapbox/light-v9',
         initial_view_state=lagos_initial_view,
         layers=[sp_layer]
-    ))
+    )
     
 
+# Display the map
+    selected_point = st.pydeck_chart(deck)
 
+    # Initialize session state for dialog visibility
+    if 'dialog_visible' not in st.session_state:
+        st.session_state.dialog_visible = False
+
+    # Handle clicks on the map
+    if selected_point and selected_point['objectId'] is not None:
+        clicked_index = selected_point['objectId']
+        selected_facility = trees_df.iloc[clicked_index]
+
+        # Set the dialog to visible
+        st.session_state.dialog_visible = True
+
+        # Dialog box content
+        if st.session_state.dialog_visible:
+            st.write("### Facility Details")
+            st.write(f"**Address:** {selected_facility['Address']}")
+            st.write(f"**Contact Number:** {selected_facility['Contact']}")
+            if st.button('Close'):
+                st.session_state.dialog_visible = False
 
 
 
