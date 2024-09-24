@@ -6,8 +6,7 @@ import pydeck as pdk
 def display_page():
     st.title('SF Trees')
     st.write(
-    """This app analyzes trees in San Francisco using
-    a dataset kindly provided by SF DPW""")
+    """This app analyzes the Facilities of  Nigeria Correctional Service Center in Lagos""")
     # Load data
     trees_df = pd.read_csv('LGAs.csv')
     trees_df.dropna(how='any', inplace=True)
