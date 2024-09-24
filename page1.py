@@ -32,6 +32,7 @@ def display_page():
         get_position='[Longitude, Latitude]',  # Ensure correct ordering
         get_radius=30,
         get_fill_color=[255, 0, 0, 160],  # Red with some transparency
+        pickable = True,
     )
    
     # Render the map
