@@ -15,7 +15,7 @@ if 'page' not in st.session_state:
     st.session_state.page = 'home'
 
 # Sidebar for navigation
-st.sidebar.title("Navigation")
+st.sidebar.title("Departments")
 
 # Create buttons for navigation
 if st.sidebar.button("Home"):
