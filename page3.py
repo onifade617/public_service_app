@@ -4,7 +4,7 @@ import pandas as pd
 import pydeck as pdk
 
 def display_page():
-    st.title('SF Trees')
+    st.title('Nigeria Correctional Service Center Facilities in Lagos State')
     st.write(
     """This app analyzes the Facilities of  Nigeria Correctional Service Center in Lagos""")
     # Load data

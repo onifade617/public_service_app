@@ -11,7 +11,7 @@ import pandas as pd
 import pydeck as pdk
 
 def display_page():
-    st.title('Federal Fire service Locations in Lagos')
+    st.title('Federal Fire service Facilities in Lagos State')
     st.write(
     """This app analyzes the Facilities of  Federal Fire service in Lagos """)
     # Load data
