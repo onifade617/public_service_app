@@ -8,7 +8,7 @@ def display_page():
     st.write(
     """This app analyzes the Facilities of  Nigeria Correctional Service Center in Lagos""")
     # Load data
-    trees_df = pd.read_csv("Fire-Stations.csv")
+    trees_df = pd.read_csv('LGAs.csv')
     trees_df.dropna(how='any', inplace=True)
 
     # Set the initial view state to Lagos, Nigeria
